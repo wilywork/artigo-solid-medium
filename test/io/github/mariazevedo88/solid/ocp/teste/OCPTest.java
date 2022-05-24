@@ -28,7 +28,7 @@ public class OCPTest {
 	    ServicoDeFrete entrega2 = new Frete();
 	     
 	    CalculadoraDePrecos calculadora2 = new CalculadoraDePrecos(tabela2, entrega2);
-	    double preco2 = calculadora2.calcula(new Produto("Monitor 21'", 719.0, "sao paulo"));
+	    double preco2 = calculadora2.calcula(new Produto("Monitor 21'", 719.0, "sao paulo teste"));
 	    double precoEsperado2 = 690.55;  
 	    
 	    assertEquals(precoEsperado1, preco1, 0.0001);
