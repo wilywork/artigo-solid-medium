@@ -23,25 +23,9 @@
 		</fileset>
 	</path>
 	
-	<path id="classpath-compile-test">
-		<path refid="classpath-compile"/>
-		<pathelement path="${build.dir}/${classes.dir}"/>
-	</path>
-	
-	<path id="classpath-test">
-		<path refid="classpath-compile-test"/>
-		<pathelement path="${build.dir}/${classes.test.dir}"/>
-	</path>
-	
 	<target name="compile" depends="copy-resources">
 		<javac destdir="${build.dir}/${classes.dir}" srcdir="${src.dir}" includeantruntime="false">
 			<classpath refid="classpath-compile" />
-		</javac>
-	</target>
-	
-	<target name="compile-test" depends="compile">
-		<javac destdir="${build.dir}/${classes.test.dir}" srcdir="${test.dir}" includeantruntime="false">
-			<classpath refid="classpath-compile-test" />
 		</javac>
 	</target>
 	
