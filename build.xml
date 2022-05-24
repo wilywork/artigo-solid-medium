@@ -1,5 +1,5 @@
 <project name="artigo-solid-medium" default="compile">
-	<description>artigo-solid-medium build file</description>
+	<description>artigo-solid-medium build file - teste travis</description>
 	
 	<property file="build.properties"/>
 	
