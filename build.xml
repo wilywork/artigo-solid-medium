@@ -7,8 +7,6 @@
 		<delete dir="${build.dir}" />
 		<mkdir  dir="${build.dir}" />
 		<mkdir  dir="${build.dir}/${classes.dir}" />
-		<mkdir  dir="${build.dir}/${classes.test.dir}" />
-		<mkdir  dir="${build.dir}/${test.report.dir}"/>
 	</target>
 	
 	<target name="copy-resources" depends="clean">
@@ -47,8 +45,4 @@
 		</javac>
 	</target>
 	
-	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-	    <classpath path="${lib.dir}/jacocoant.jar"/>
-	</taskdef>
-
 </project>
