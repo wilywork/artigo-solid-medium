@@ -3,30 +3,4 @@
 	
 	<property file="build.properties"/>
 	
-	<target name="clean">
-		<delete dir="${build.dir}" />
-		<mkdir  dir="${build.dir}" />
-		<mkdir  dir="${build.dir}/${classes.dir}" />
-	</target>
-	
-	<target name="copy-resources" depends="clean">
-		<copy todir="${build.dir}/${classes.dir}">
-			<fileset dir="${src.dir}">
-				<include name="*.xml"/>
-			</fileset>
-		</copy>
-	</target>
-	
-	<path id="classpath-compile">
-		<fileset dir="${lib.dir}">
-			<include name="*.jar" />
-		</fileset>
-	</path>
-	
-	<target name="compile" depends="copy-resources">
-		<javac destdir="${build.dir}/${classes.dir}" srcdir="${src.dir}" includeantruntime="false">
-			<classpath refid="classpath-compile" />
-		</javac>
-	</target>
-	
 </project>
